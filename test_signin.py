@@ -21,8 +21,8 @@ import allure
 @allure.feature("sign in model")
 class Testlogin(object):
     @allure.story("2 accounts: 1right +1 wrong")
-    @pytest.mark.parametrize('emailaddress,password', [("sunnie2004@gmail.com", "1357810Hxq!#"),
-                                                       ("sunnie2004@gmail.com", "1357810Hxq!")])
+    @pytest.mark.parametrize('emailaddress,password', [("email1", "**************"),
+                                                       ("email2", "**************")])
     def test_login(self,get_driver,emailaddress,password):
         with allure.step("firefox open:"):
             login_page = LoginPage(get_driver)
